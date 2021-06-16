@@ -26,9 +26,12 @@
   },
   "homepage": "https://github.com/brannonh/legendary-adventure#readme",
   "dependencies": {
-    "date-fns": "^2.22.1"
+    "chalk": "^4.1.1",
+    "date-fns": "^2.22.1",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@tsconfig/node14": "^1.0.0"
+    "@tsconfig/node14": "^1.0.0",
+    "@types/lodash": "^4.14.170"
   }
 }
