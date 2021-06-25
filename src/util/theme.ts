@@ -6,7 +6,7 @@ export type StyleTypes = 'primary' | 'secondary' | 'success' | 'danger' | 'warni
 type Colors = Record<ColorType, string>;
 export type Styles = Partial<Record<StyleTypes, Partial<Colors>>>;
 
-export default class Theme {
+export class Theme {
   styles: Styles;
 
   constructor(styles: Styles = Themes.Default) {
@@ -24,15 +24,16 @@ export default class Theme {
   }
 }
 
-const Themes: Record<string, Styles> = {
+export const Themes: Record<string, Styles> = {
+  // Default to Dracula Theme
   Default: {
-    primary: { color: '#FFFFFF' },
-    secondary: { color: '#00FFFF' },
-    success: { color: '#00FF00' },
-    danger: { color: '#FF0000' },
-    warning: { color: '#FFFF00' },
-    info: { color: '#0000FF' },
-    fade: { color: '#808080' },
-    highlight: { color: '#000000', bgColor: "#FFFFFF" },
+    primary: { color: '#f8f8f2' },
+    secondary: { color: '#bd93f9' },
+    success: { color: '#50fa7b' },
+    danger: { color: '#ff5555' },
+    warning: { color: '#f1fa8c' },
+    info: { color: '#8be9fd' },
+    fade: { color: '#6272a4' },
+    highlight: { color: '#f8f8f2', bgColor: "#44475a" },
   },
 }
