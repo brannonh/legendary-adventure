@@ -1,13 +1,17 @@
 import { StyleTypes } from "../util";
 
 export interface TimelineEntry {
-  when: Date,
-  data: EntryLine[],
+  when: Date;
+  data: EntryLine[];
+  style?: StyleTypes;
 }
 
 export interface EntryLine {
-  fields: EntryField[],
-  style: StyleTypes;
+  fields: EntryField[];
+  style?: StyleTypes;
 }
 
-export type EntryField = string;
+export interface EntryField {
+  value: string;
+  style?: StyleTypes;
+}

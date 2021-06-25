@@ -5,14 +5,14 @@ import { DateFormat, Theme } from './util';
 export class Timeline {
   dateFormat: DateFormat;
   defaultSortDir: string;
-  header: EntryLine;
+  header: EntryLine | undefined;
   entries: TimelineEntry[] = [];
   theme: Theme;
 
   constructor(options: TimelineOptions | undefined) {
     this.dateFormat = options?.dateFormat ?? 'dateTime';
     this.defaultSortDir = options?.defaultSort ?? 'asc';
-    this.header = options?.header ?? [];
+    this.header = options?.header;
     this.theme = new Theme(options?.styles ?? {});
   }
 
