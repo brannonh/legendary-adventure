@@ -10,17 +10,25 @@ export class Theme {
   styles: Styles;
 
   constructor(styles: Styles = Themes.Default) {
-    _.merge(Themes.Default, styles);
-    this.styles = styles;
+    this.styles = _.cloneDeep(Themes.Default);
+    _.merge(this.styles, styles);
   }
 
   stylize(text: string, styleType: StyleTypes = 'primary') {
     const style = this.styles[styleType];
     // Because of _.merge in the constructor, style is never undefined.
-    const color = style!.color ?? '';
-    const bgColor = style!.bgColor ?? '';
+    const color = style!.color ?? false;
+    const bgColor = style!.bgColor ?? false;
 
-    return hex(color).bgHex(bgColor)(text);
+    if (color !== false) {
+      text = hex(color)(text);
+    }
+
+    if (bgColor !== false) {
+      text = bgHex(bgColor)(text);
+    }
+
+    return text;
   }
 }
 

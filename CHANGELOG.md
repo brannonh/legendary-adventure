@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog], and this project adheres to [Semantic
   - New repository and configuration
   - Timeline support
   - Theme support
+  - Dracula Theme as default theme
 
 <!-- Version Links -->
 [Unreleased]: https://github.com/brannonh/legendary-adventure/compare/v0.1.0...HEAD

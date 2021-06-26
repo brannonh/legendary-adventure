@@ -4,7 +4,8 @@
   "description": "CLI library for managing and displaying arbitrary history data",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "watch": "tsc --watch"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   "homepage": "https://github.com/brannonh/legendary-adventure#readme",
   "dependencies": {
     "chalk": "^4.1.1",
+    "cli-table3": "^0.6.0",
     "date-fns": "^2.22.1",
     "lodash": "^4.17.21"
   },
